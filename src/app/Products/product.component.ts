@@ -15,7 +15,9 @@ import { Router } from '@angular/router'
                 </rating> <br>                                            
                 {{ data.description }} <br>
                 Colours:{{ data.colours }} <br>
-                <h5 class="mt-0">{{ data.price }}</h5> <br>
+                <h5 class="mt-0">{{ data.price }}</h5> 
+                <button class="button_maroon" (click)="onClick(data)"> View Product </button>
+                <br>
                 <div class="alrt"
                 *ngIf="!data.instock">
                 Out of stock
