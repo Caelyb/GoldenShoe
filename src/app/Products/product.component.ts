@@ -5,27 +5,27 @@ import { Router } from '@angular/router'
     selector: 'product',
     template: `
         <div class="media">
-            <img  src="{{ data.imageUrl }}" class="mr-3" (click)="onClick(data)" alt="..." style="width:150px;height:150px;">
+            <img  src="{{ data.imageUrl }}" class="mr-3" (click)="onClick(data)" alt="..." style="width:240px;height:240px;">
             <div class="media-body">
                 <h5 class="mt-0">{{ data.productName }}</h5>
-                {{ data.releasedDate }}
+                Release date: {{ data.releasedDate }} <br>
                 <rating 
                     [rating]="data.rating" 
                     [numOfReviews]="data.numOfReviews">
                 </rating> <br>                                            
                 {{ data.description }} <br>
-                Colours:{{ data.colours }} <br>
+                <b> Colours:{{ data.colours }} </b> <br>
+                <b> Sizes available: {{ data.sizes }} </b>
                 <h5 class="mt-0">{{ data.price }}</h5> 
                 <button class="button_maroon" (click)="onClick(data)"> View Product </button>
                 <br>
                 <div class="alrt"
                 *ngIf="!data.instock">
-                Out of stock
+                <b> Out of stock </b>
             </div>    
             </div>
         </div>    
     `,
-
     styles: [` 
 
         .alrt{
