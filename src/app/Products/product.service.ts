@@ -22,7 +22,7 @@ export class ProductService{
                 price: "£50",
                 productName: "Walking boots",
                 releasedDate: "April 8th 2020",
-                description: "These Boots are perfect for hiking. Durable with a steel toe cap. stylish camo design.",         
+                description: "These Boots are perfect for hiking. Durable with a steel toe cap. Stylish camo design.",         
                 rating: 3,
                 numOfReviews: 12,
                 sizes: [6,7,8,9,10],    
